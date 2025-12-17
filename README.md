@@ -74,7 +74,12 @@ Xây dựng một hệ thống lý thuyết và thuật toán hoàn chỉnh đ�
 ---
 
 ## 📚 References
-1. Cuturi, M. (2013). Sinkhorn distances: Lightspeed computation of optimal transport. *NeurIPS*.
-2. Lin, T., et al. (2022). On the complexity of approximating multimarginal optimal transport. *JMLR*.
-3. Le, K., et al. (2022). On multimarginal partial optimal transport. *AISTATS*.
-4. Nguyen, A. D., et al. (2024). On partial optimal transport. *AAAI*.
+[1] Anh Duc Nguyen, Tuan Dung Nguyen, Quang Minh Nguyen, Hoang H. Nguyen, Lam M. Nguyen, Kim-Chuan Toh. On partial optimal transport: Revising the infeasibility of sinkhorn and efficient gradient methods. *AAAI* 2024: 14387-14395.
+
+[2] Tianyi Lin, Nhat Ho, Marco Cuturi, Michael I. Jordan. On the Complexity of Approximating Multimarginal Optimal Transport. *J. Mach. Learn. Res.* 23: 65:1-65:43 (2022).
+
+[3] Khang Le, Huy Nguyen, Khai Nguyen, Tung Pham, Nhat Ho. On Multimarginal Partial Optimal Transport: Equivalent Forms and Computational Complexity. *AISTATS* 2022: 4397-4413.
+
+[4] Marco Cuturi. Sinkhorn Distances: Lightspeed Computation of Optimal Transport. *NIPS* 2013: 2292-2300.
+
+[5] Pavel Dvurechensky, Alexander Gasnikov, Alexey Kroshnin. Computational Optimal Transport: Complexity by Accelerated Gradient Descent Is Better Than by Sinkhorn's Algorithm. *ICML* 2018: 1366-1375.
