@@ -1,23 +1,80 @@
-# On Multi-Marginal Partial Optimal Transport (MMPOT)
+# CS519.Q11.KHTN - Research Methodology
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-Repository này chứa poster, slide và docs cho đề tài nghiên cứu: **"On Multi-Marginal Partial Optimal Transport: Rectifying Infeasible Extension Strategies and Efficient Primal-Dual Methods"**.
-Nhóm bao gồm Hoàng Đức Dũng và Nguyễn Đình Thiên Quang trong môn CS519.Q11
+## 📌 Project Title (Vietnamese)
+**VẬN CHUYỂN TỐI ƯU BỘ PHẬN ĐA BIÊN: KHẮC PHỤC CHIẾN LƯỢC MỞ RỘNG KHÔNG KHẢ THI VÀ CÁC PHƯƠNG PHÁP PRIMAL-DUAL HIỆU QUẢ**
 
-## 📌 Giới thiệu (Overview)
+## 📌 Project Title (English)
+**ON MULTI-MARGINAL PARTIAL OPTIMAL TRANSPORT: RECTIFYING INFEASIBLE EXTENSION STRATEGIES AND EFFICIENT PRIMAL-DUAL METHODS**
 
-Nghiên cứu này giải quyết các vấn đề tồn đọng trong bài toán Vận chuyển Tối ưu Bộ phận Đa biên (MMPOT):
-1.  **Chỉ ra sai lầm:** Chứng minh các chiến lược mở rộng điểm giả (dummy point extension) hiện tại dẫn đến nghiệm **không khả thi (infeasible)** về mặt toán học.
-2.  **Đề xuất giải pháp:** Giới thiệu công thức **Đối ngẫu (Dual Formulation)** mới không cần mở rộng tensor.
-3.  **Thuật toán tối ưu:** Cung cấp các thuật toán giải (solvers) đạt tốc độ hội tụ $\mathcal{O}(1/\epsilon)$.
+---
 
-## 🚀 Các thuật toán (Algorithms)
+🎓 **Instructor**
+- PGS.TS.Lê Đình Duy
 
-Repo này bao gồm việc cài đặt các thuật toán sau:
+---
 
-* **GreenkhornMMPOT:** Thuật toán tham lam (Greedy coordinate descent) cải tiến cho MMPOT.
-* **PDAAM:** Primal-Dual Accelerated Alternating Minimization.
-* **APDAGD:** Adaptive Primal-Dual Accelerated Gradient Descent.
-* **Rounding Algorithm:** Thuật toán làm tròn mới đảm bảo nghiệm thỏa mãn ràng buộc khối lượng.
+## 👥 Team Members
+- **Nguyễn Đình Thiên Quang** - 23521285
+- **Hoàng Đức Dũng** - 23520328
+---
+
+## 🔗 Project Structure
+- **Slides:** OnMulti-MarginalPartialOptimalTransportRectifyingInfeasibleExtensionStrategiesAndEfficientPrimal-DualMethods.pdf
+- **Proposal:** OnMulti-MarginalPartialOptimalTransportRectifyingInfeasibleExtensionStrategiesAndEfficientPrimal-DualMethods_docs.pdf
+- **Poster:** OnMulti-MarginalPartialOptimalTransportRectifyingInfeasibleExtensionStrategiesAndEfficientPrimal-DualMethods_poster.pdf
+
+---
+
+## 🌸 Abstract
+Bài toán Vận chuyển Tối ưu Bộ phận Đa biên (MMPOT) là công cụ mạnh mẽ để xử lý dữ liệu nhiễu và không cân bằng trong Học máy. Tuy nhiên, các phương pháp hiện tại chủ yếu dựa vào **Chiến lược mở rộng (Extension Strategies)** bằng cách thêm điểm giả (dummy points). 
+
+Nghiên cứu này chỉ ra rằng chiến lược trên dẫn đến các lời giải **không khả thi (infeasible)** về mặt toán học do vi phạm ràng buộc tổng khối lượng khi áp dụng điều chuẩn Entropy. Đồng thời, chúng gây ra sự bùng nổ về độ phức tạp tính toán ($\mathcal{O}(1/\epsilon^4)$). Để giải quyết vấn đề này, đề tài đề xuất một **khung Primal-Dual mới** không cần mở rộng tensor, đi kèm với các thuật toán tăng tốc (PDAAM, APDAGD) đạt tốc độ hội tụ tối ưu lý thuyết ($\mathcal{O}(1/\epsilon)$), đảm bảo tính chính xác và hiệu quả cao.
+
+---
+
+## 🎯 Research Objectives
+
+### Mục tiêu tổng quát
+Xây dựng một hệ thống lý thuyết và thuật toán hoàn chỉnh để giải quyết bài toán MMPOT một cách chính xác về mặt toán học và tối ưu về mặt chi phí tính toán.
+
+### Mục tiêu cụ thể
+- **Chứng minh tính bất khả thi:** Phân tích toán học để bác bỏ tính hiệu quả của các chiến lược mở rộng điểm giả hiện tại (SOTA).
+- **Xây dựng công thức Đối ngẫu mới:** Thiết lập bài toán tối ưu đối ngẫu trơn (smooth dual) trực tiếp cho MMPOT mà không cần mở rộng tensor.
+- **Phát triển thuật toán tốc độ cao:** Cài đặt và tối ưu hóa 3 thuật toán:
+  + GreenkhornMMPOT (Tham lam)
+  + PDAAM (Tăng tốc Primal-Dual)
+  + APDAGD (Gradient Descent thích nghi)
+- **Thực nghiệm:** Kiểm chứng hiệu quả trên bài toán Partial Barycenter với dữ liệu ảnh MNIST.
+
+---
+
+## 🖊️ Methodology
+
+### 1️⃣ Phân tích sự bất khả thi (Infeasibility Analysis)
+- Chứng minh rằng tính phi tuyến của **Entropic Regularization** ngăn cản việc điều chỉnh khối lượng chính xác tại các biên khi dùng điểm giả.
+- Chỉ ra độ phức tạp của thuật toán Sinkhorn cũ tăng vọt lên mức $\mathcal{O}(1/\epsilon^4)$ hoặc hàm mũ khi số biên $m \ge 4$.
+
+### 2️⃣ Công thức Đối ngẫu mới (Novel Dual Formulation)
+- Mô hình hóa bài toán gốc với các biến bù (slack variables).
+- Chuyển đổi sang bài toán đối ngẫu lồi mạnh và trơn.
+- Chứng minh **Cận trên mới (Novel Upper Bound)** cho chuẩn $L_\infty$ của nghiệm tối ưu, làm cơ sở cho sự hội tụ của thuật toán.
+
+### 3️⃣ Thuật toán & Làm tròn (Algorithms & Rounding)
+- **Rounding:** Sử dụng quy trình "Enforcing Procedure" để chiếu nghiệm gần đúng về tập khả thi, đảm bảo sai số khối lượng được kiểm soát ($23\epsilon$).
+- **Solvers:** Áp dụng kỹ thuật tăng tốc Nesterov và cập nhật tham lam (Greedy update) để đạt tốc độ hội tụ $\mathcal{O}(1/\epsilon)$.
+
+---
+
+## 📊 Expected Outcomes
+- Một khung lý thuyết chứng minh rõ ràng sai lầm của các phương pháp cũ.
+- Bộ thuật toán (Greenkhorn, PDAAM, APDAGD) chạy nhanh hơn và chính xác hơn các baseline hiện tại.
+- Ứng dụng thành công trong việc lọc nhiễu (outliers) cho bài toán tính toán tâm tỉ cự (Barycenter) trên dữ liệu ảnh.
+
+---
+
+## 📚 References
+1. Cuturi, M. (2013). Sinkhorn distances: Lightspeed computation of optimal transport. *NeurIPS*.
+2. Lin, T., et al. (2022). On the complexity of approximating multimarginal optimal transport. *JMLR*.
+3. Le, K., et al. (2022). On multimarginal partial optimal transport. *AISTATS*.
+4. Nguyen, A. D., et al. (2024). On partial optimal transport. *AAAI*.
