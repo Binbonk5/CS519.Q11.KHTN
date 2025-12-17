@@ -23,6 +23,7 @@
 - **Slides:** OnMulti-MarginalPartialOptimalTransportRectifyingInfeasibleExtensionStrategiesAndEfficientPrimal-DualMethods.pdf
 - **Proposal:** OnMulti-MarginalPartialOptimalTransportRectifyingInfeasibleExtensionStrategiesAndEfficientPrimal-DualMethods_docs.pdf
 - **Poster:** OnMulti-MarginalPartialOptimalTransportRectifyingInfeasibleExtensionStrategiesAndEfficientPrimal-DualMethods_poster.pdf
+- **Youtube:** [Link](https://www.youtube.com/watch?v=rEUJsG6ulhM)
 
 ---
 
