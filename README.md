@@ -30,7 +30,7 @@
 ## 🌸 Abstract
 Bài toán Vận chuyển Tối ưu Bộ phận Đa biên (MMPOT) là công cụ mạnh mẽ để xử lý dữ liệu nhiễu và không cân bằng trong Học máy. Tuy nhiên, các phương pháp hiện tại chủ yếu dựa vào **Chiến lược mở rộng (Extension Strategies)** bằng cách thêm điểm giả (dummy points). 
 
-Nghiên cứu này chỉ ra rằng chiến lược trên dẫn đến các lời giải **không khả thi (infeasible)** về mặt toán học do vi phạm ràng buộc tổng khối lượng khi áp dụng điều chuẩn Entropy. Đồng thời, chúng gây ra sự bùng nổ về độ phức tạp tính toán ($\mathcal{O}(1/\epsilon^4)$). Để giải quyết vấn đề này, đề tài đề xuất một **khung Primal-Dual mới** không cần mở rộng tensor, đi kèm với các thuật toán tăng tốc (PDAAM, APDAGD) đạt tốc độ hội tụ tối ưu lý thuyết ($\mathcal{O}(1/\epsilon)$), đảm bảo tính chính xác và hiệu quả cao.
+Nghiên cứu này chỉ ra rằng chiến lược trên dẫn đến các lời giải **không khả thi (infeasible)** về mặt toán học do vi phạm ràng buộc tổng khối lượng khi áp dụng điều chuẩn Entropy. Đồng thời, chúng gây ra sự bùng nổ về độ phức tạp tính toán ( $\mathcal{O}(1/\epsilon^4)$ ). Để giải quyết vấn đề này, đề tài đề xuất một **khung Primal-Dual mới** không cần mở rộng tensor, đi kèm với các thuật toán tăng tốc (PDAAM, APDAGD) đạt tốc độ hội tụ tối ưu lý thuyết ( $\mathcal{O}(1/\epsilon)$ ), đảm bảo tính chính xác và hiệu quả cao.
 
 ---
 
@@ -62,7 +62,7 @@ Xây dựng một hệ thống lý thuyết và thuật toán hoàn chỉnh đ�
 - Chứng minh **Cận trên mới (Novel Upper Bound)** cho chuẩn $L_\infty$ của nghiệm tối ưu, làm cơ sở cho sự hội tụ của thuật toán.
 
 ### 3️⃣ Thuật toán & Làm tròn (Algorithms & Rounding)
-- **Rounding:** Sử dụng quy trình "Enforcing Procedure" để chiếu nghiệm gần đúng về tập khả thi, đảm bảo sai số khối lượng được kiểm soát ($23\epsilon$).
+- **Rounding:** Sử dụng quy trình "Enforcing Procedure" để chiếu nghiệm gần đúng về tập khả thi, đảm bảo sai số khối lượng được kiểm soát.
 - **Solvers:** Áp dụng kỹ thuật tăng tốc Nesterov và cập nhật tham lam (Greedy update) để đạt tốc độ hội tụ $\mathcal{O}(1/\epsilon)$.
 
 ---
