@@ -20,9 +20,9 @@
 ---
 
 ## 🔗 Project Structure
-- **Slides:** OnMulti-MarginalPartialOptimalTransportRectifyingInfeasibleExtensionStrategiesAndEfficientPrimal-DualMethods.pdf
-- **Proposal:** OnMulti-MarginalPartialOptimalTransportRectifyingInfeasibleExtensionStrategiesAndEfficientPrimal-DualMethods_docs.pdf
-- **Poster:** OnMulti-MarginalPartialOptimalTransportRectifyingInfeasibleExtensionStrategiesAndEfficientPrimal-DualMethods_poster.pdf
+- **Slides:** CS519.Q11.DeCuong.FinalReport.Slide.pdf
+- **Proposal:** CS519.Q11.DeCuong.FinalReport.Doc.pdf
+- **Poster:** CS519.Q11.DeCuong.FinalReport.Poster.pdf
 - **Youtube:** [Link](https://www.youtube.com/watch?v=oJYt4nf3nJU)
 
 ---
